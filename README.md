@@ -1,21 +1,12 @@
-{
-    "Version": "2012-10-17",
-    "Id": "PutObjPolicy",
-    "Statement": [
-        {
-            "Sid": "SecureTransport",
-            "Effect": "Deny",
-            "Principal": "*",
-            "Action": "s3:*",
-            "Resource": "arn:aws:s3:::lab-eb-cloudbreak-pot/*",
-            "Condition": {
-                "Bool": {
-                    "aws:SecureTransport": "false"
-                }
-            }
-        }
-    ]
-} 
+To run my JAR use spark-submit (The working one)
+./spark-submit --class Merge --master local[*] /share_data/dockertest/spark_test/test-spark/target/scala-2.11/sample1_2.11-2.3.2.jar
+
+spark-submit --class Merge --master local[*] /share_data/dockertest/spark_test/target/scala-2.11/sample1_2.11-2.3.2.jar
+ 
+spark-submit --class ecsunion --master local[*] /share_data/sparkecs3_2.11-2.3.2.jar
+
+spark-submit --class ecsunion --master local[*] /share_data/dockertest/spark_test/target/scala-2.11/sample1_2.11-2.3.2.jar
+
 
 
 
