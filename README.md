@@ -1,3 +1,27 @@
+{
+    "Version": "2012-10-17",
+    "Id": "PutObjPolicy",
+    "Statement": [
+        {
+            "Sid": "SecureTransport",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::lab-eb-cloudbreak-pot/*",
+            "Condition": {
+                "Bool": {
+                    "aws:SecureTransport": "false"
+                }
+            }
+        }
+    ]
+} 
+
+
+
+
+
+
 # ECSs3
 
 spark-submit --class ecsunion --master local[*] sparkecs3_2.11-2.3.2.jar
