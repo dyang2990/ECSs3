@@ -1,3 +1,7 @@
+curl http://169.254.169.254/latest/meta-data/iam/security-credentials/travrol-cloudbreak-pot
+aws s3 ls s3://travrol-cloudbreak-pot
+
+
 To run my JAR use spark-submit (The working one)
 ./spark-submit --class Merge --master local[*] /share_data/dockertest/spark_test/test-spark/target/scala-2.11/sample1_2.11-2.3.2.jar
 
