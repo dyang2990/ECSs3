@@ -1,5 +1,4 @@
 curl http://169.254.169.254/latest/meta-data/iam/security-credentials/travrol-cloudbreak-pot
-aws s3 ls s3://travrol-cloudbreak-pot
 
 
 To run my JAR use spark-submit (The working one)
